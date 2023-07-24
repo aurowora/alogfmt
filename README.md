@@ -2,7 +2,7 @@
 
 Implements an encoder for [logfmt](https://brandur.org/logfmt) using serde.
 
-To use, add the following the `[dependencies]` table in your `Cargo.toml`.
+To use, add the following to `[dependencies]` table in your `Cargo.toml`.
 
 ```toml
 alogfmt = "^0.1.0"
