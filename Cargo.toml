@@ -1,0 +1,28 @@
+[package]
+name = "alogfmt"
+authors = ["Aurora McGinnis <aurora@aurora.vg>"]
+description = "Logfmt serializer implementation using serde."
+version = "0.1.0"
+edition = "2021"
+readme = true
+repository = "https://git.aurora.vg/aurora/alogfmt"
+license = "MPL-2.0"
+keywords = ["logfmt"]
+categories = ["encoding"]
+
+[dependencies]
+base16 = { version = "^0.2.1", features = ["alloc"], default-features = false }
+dtoa = "^1.0.9"
+itoa = "^1.0.9"
+serde = { version = "1", default-features = false, features = ["std"]}
+thiserror = "^1.0.43"
+
+[dev-dependencies]
+serde = { version = "1", default-features = false, features = ["std", "derive"]}
+serde_bytes = "^0.11.12"
+criterion = { version = "^0.4", features = ["html_reports"] }
+anyhow = "^1.0.72"
+
+[[bench]]
+name = "struct"
+harness = false
